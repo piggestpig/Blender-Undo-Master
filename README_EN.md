@@ -50,4 +50,5 @@ RNA_def_property_int_sdna(prop, nullptr, "undosteps");
 RNA_def_property_range(prop, 0, 256);
 Changing 256 to a larger number can increase the undo limit.
 > Note, the variable type of undosteps is short, so it cannot be changed to a number greater than 32767, and short cannot be changed to things like long, which will cause memory alignment problems and compilation failure.
+
 However, downloading and compiling the source code is a tedious process. I compared the new and old files, found the changes, and later directly modify them. Eventually this Python script was created. Since blender.exe cannot be modified while Blender is running, I need to copy a cache file which is BlenderPro.exe in the script.
