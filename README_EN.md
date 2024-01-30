@@ -16,9 +16,9 @@ hex_content = binascii.hexlify(content)
 if hex_content.count(b'00010000000000000001000001000000') == 1:
     hex_content = hex_content.replace(b'00010000000000000001000001000000', b'10270000000000001027000001000000')
 elif hex_content.count(b'00010000000000000001000001000000') > 1:
-    raise ValueError("修改失败,发现多处特征码,你的blender版本可能过新/过旧")
+    raise ValueError("Modification failed, multiple feature codes found, your Blender version may be too new/old")
 else:
-    raise ValueError("修改失败,没有找到特征码,你的blender版本可能过新/过旧，或者已经修改过了")
+    raise ValueError("Modification failed, feature code not found, your Blender version may be too new/old, or it has been modified")
 new_content = binascii.unhexlify(hex_content)
 with open(new_file_path, 'wb') as f:
     f.write(new_content)
