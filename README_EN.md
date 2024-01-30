@@ -48,8 +48,11 @@ bpy.ops.wm.quit_blender()
 
 ## Behind the script
 In the Blender source code `rna_userdef.cc`, find
+
 RNA_def_property_int_sdna(prop, nullptr, "undosteps");
+
 RNA_def_property_range(prop, 0, 256);
+
 Changing 256 to a larger number can increase the undo limit.
 > Note, the variable type of undosteps is short, so it cannot be changed to a number greater than 32767, and short cannot be changed to things like long, which will cause memory alignment problems and compilation failure.
 
