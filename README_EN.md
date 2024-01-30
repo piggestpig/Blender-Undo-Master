@@ -41,7 +41,9 @@ bpy.ops.wm.quit_blender()
 
 ## Cautions
 > Only applicable to Windows, Mac should not have exe files
+
 > Tested with blender 3.3, 3.6, 4.0, 4.1 and they all work well
+
 > If you download a new version of Blender (default undo limit is 256), but then load the old user preferences (undo number modified to >256), it will cause the undo function to fail. You should run this script for the new version or reduce the number of undo steps.
 
 ## Behind the script
