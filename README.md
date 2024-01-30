@@ -1,4 +1,4 @@
-# 增大blender撤销上限的脚本
+# ✨增大blender撤销上限的脚本
 
 [**English**](./README_EN.md) | [**中文**](./README.md)
 
@@ -50,4 +50,5 @@ RNA_def_property_int_sdna(prop, nullptr, "undosteps");
 RNA_def_property_range(prop, 0, 256);
 把256改成更大的数就能提高撤销上限。
 > 注意，undosteps的变量类型是short，不能改成超过32767的数，也不能把short改成long，会出现内存对齐问题导致编译失败。
+
 不过下载和编译源码是很繁琐的过程，我把新旧文件作比较，找到变动的地方，以后直接修改这一处就可以了。然后就有了这个python脚本。由于blender运行时不能修改blender.exe自身，需要复制一个缓存文件，也就是脚本中的BlenderPro.exe.
