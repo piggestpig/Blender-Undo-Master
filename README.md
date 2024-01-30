@@ -48,8 +48,11 @@ bpy.ops.wm.quit_blender()
 
 ## 原理
 在blender源代码的rna_userdef.cc中，找到
+
 RNA_def_property_int_sdna(prop, nullptr, "undosteps");
+
 RNA_def_property_range(prop, 0, 256);
+
 把256改成更大的数就能提高撤销上限。
 > 注意，undosteps的变量类型是short，不能改成超过32767的数，也不能把short改成long，会出现内存对齐问题导致编译失败。
 
