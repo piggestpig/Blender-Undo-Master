@@ -47,7 +47,7 @@ bpy.ops.wm.quit_blender()
 > 如果你下载了新版本的blender(默认撤销上限256)，但是加载了旧版本用户设置（撤销次数修改至>256）,会导致撤销功能失效。需要对新版本使用此脚本或者降低撤销次数。
 
 ## 原理
-在blender源代码的rna_userdef.cc中，找到
+在blender源代码的`rna_userdef.cc`中，找到
 
 RNA_def_property_int_sdna(prop, nullptr, "undosteps");
 
