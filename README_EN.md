@@ -29,7 +29,7 @@ source_file_path = bpy.app.binary_path
 source_dir = os.path.dirname(source_file_path)
 new_file_path = os.path.join(source_dir, "blender.exe")
 shutil.copy(bpy.app.binary_path, "blender.exe")
-subprocess.Popen([new_file_path,"--python-expr","import bpy;bpy.context.preferences.edit.undo_steps = 1000"])
+subprocess.Popen([source_file_path,"--python-expr","import bpy;bpy.context.preferences.edit.undo_steps = 1000"])
 bpy.ops.wm.quit_blender()
 """
 subprocess.Popen([new_file_path,"-b","--python-expr",copy])
