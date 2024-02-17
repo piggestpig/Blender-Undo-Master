@@ -1,3 +1,6 @@
+#https://github.com/piggestpig/Blender-Undo-Master
+#在blender文本编辑器运行此脚本，自动重启后将撤销次数增大到1000，上限提高到10000
+
 import bpy,binascii,os,subprocess
 
 # 获取blender.exe路径
